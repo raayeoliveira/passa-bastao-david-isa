@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passagem de Bastão — Adm/Financeiro Franquias · David → Isabella</title>
+<style>
+  :root{
+    --coral:#EB615E;
+    --coral-soft:#fef3f0;
+    --bg:#f8f6f1;
+    --card:#ffffff;
+    --ink:#1a1a1a;
+    --ink-2:#2a2a2a;
+    --muted:#5c5952;
+    --line:#e8e3dc;
+    --line-strong:#d4ccbf;
+    --head-bg:#f3eee5;
+    --zebra:#faf7f2;
+    --row-hover:#f0ebe2;
+    --amber:#d97706;
+    --green:#16a34a;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;padding:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:14.5px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:56px 44px 80px}
+
+  /* ============ HERO ============ */
+  .hero{margin-bottom:56px}
+  .hero-top{display:flex;align-items:center;gap:18px;margin-bottom:28px}
+  .logo{width:34px;height:34px;flex:0 0 34px}
+  .logo svg{width:100%;height:100%;display:block}
+  .brand{
+    font-family:var(--sans);
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:600;
+  }
+  .brand .sep{margin:0 10px;color:var(--line-strong)}
+
+  .alert{
+    background:var(--coral-soft);
+    border-left:3px solid var(--coral);
+    padding:12px 18px;
+    margin:0 0 32px;
+    font-size:12.5px;
+    letter-spacing:.02em;
+    color:#8a2a28;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .alert .tag{
+    font-size:10.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--coral);
+    margin-right:10px;
+  }
+
+  h1{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:46px;
+    line-height:1.08;
+    letter-spacing:-0.015em;
+    margin:0 0 14px;
+    color:var(--ink);
+  }
+  .hero-sub{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    color:var(--muted);
+    font-size:18px;
+    margin:0 0 32px;
+    letter-spacing:-0.005em;
+  }
+
+  .meta-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  .meta-grid .cell{padding:16px 20px;border-right:1px solid var(--line)}
+  .meta-grid .cell:last-child{border-right:none}
+  .meta-grid .k{
+    font-size:10px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:7px;
+    font-weight:600;
+  }
+  .meta-grid .v{font-size:14px;color:var(--ink);font-weight:500}
+
+  .summary p{
+    font-family:var(--serif);
+    font-size:16.5px;
+    line-height:1.65;
+    color:var(--ink-2);
+    margin:0 0 16px;
+    max-width:800px;
+  }
+  .summary p:last-child{margin-bottom:0}
+
+  /* ============ SECTIONS ============ */
+  section{margin-bottom:64px;page-break-inside:avoid}
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:18px;
+    padding-bottom:14px;
+    margin-bottom:18px;
+    border-bottom:1px solid var(--coral);
+  }
+  .sec-num{
+    font-family:var(--serif);
+    font-size:14px;
+    color:var(--coral);
+    font-weight:400;
+    letter-spacing:.04em;
+    line-height:1;
+    flex:0 0 auto;
+  }
+  .sec-title{
+    font-family:var(--serif);
+    font-size:28px;
+    margin:0;
+    color:var(--ink);
+    font-weight:400;
+    letter-spacing:-0.012em;
+    flex:1;
+    line-height:1.15;
+  }
+  .sec-count{
+    font-size:10.5px;
+    color:var(--muted);
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .sec-intro{
+    color:var(--ink-2);
+    font-size:14px;
+    line-height:1.6;
+    margin:0 0 20px;
+    max-width:860px;
+  }
+  .sec-intro code{
+    font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    font-size:12.5px;
+    background:var(--head-bg);
+    padding:1px 5px;
+    border-radius:2px;
+    color:var(--ink);
+  }
+
+  /* ============ TABLES ============ */
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--card);
+    font-size:13px;
+    font-variant-numeric:tabular-nums;
+    border:1px solid var(--line);
+  }
+  thead th{
+    background:var(--head-bg);
+    text-align:left;
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:600;
+    padding:12px 14px;
+    border-bottom:1px solid var(--line-strong);
+  }
+  tbody td{
+    padding:13px 14px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    color:var(--ink-2);
+    line-height:1.5;
+  }
+  tbody tr:nth-child(even) td{background:var(--zebra)}
+  tbody tr:hover td{background:var(--row-hover)}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td code{
+    font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    font-size:12px;
+    background:#f1ede4;
+    padding:1px 5px;
+    border-radius:2px;
+    color:var(--ink);
+  }
+
+  /* checkbox CSS */
+  td.chk{
+    width:34px;
+    text-align:center;
+    user-select:none;
+    padding-top:14px;
+  }
+  .box{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    border:1.5px solid var(--muted);
+    border-radius:2px;
+    background:#fff;
+    vertical-align:middle;
+  }
+
+  td.item{color:var(--ink);font-weight:500;min-width:170px}
+  td.when{white-space:nowrap;font-size:12px;color:var(--ink-2)}
+
+  /* pill de prazo (D1 / D2 / S1-4) */
+  .pill{
+    display:inline-block;
+    padding:2px 8px;
+    border-radius:2px;
+    font-size:10.5px;
+    letter-spacing:.08em;
+    font-weight:600;
+    text-transform:uppercase;
+    white-space:nowrap;
+    font-family:var(--sans);
+  }
+  .pill.d1{background:var(--coral-soft);color:var(--coral)}
+  .pill.d2{background:#fdf4e4;color:var(--amber)}
+  .pill.pos{background:#eaf4ea;color:var(--green)}
+
+  /* prioridade: bolinhas CSS */
+  td.pri{white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.01em}
+  .dot{
+    display:inline-block;
+    width:9px;height:9px;
+    border-radius:50%;
+    margin-right:8px;
+    vertical-align:middle;
+    position:relative;
+    top:-1px;
+  }
+  .dot.crit{background:var(--coral)}
+  .dot.imp{background:var(--amber)}
+  .dot.bom{background:var(--green)}
+  .pri .lbl{color:var(--ink-2)}
+  .pri.crit .lbl{color:var(--coral)}
+  .pri.imp .lbl{color:var(--amber)}
+  .pri.bom .lbl{color:var(--green)}
+
+  /* ============ FOOTER ============ */
+  footer.doc{
+    margin-top:72px;
+    border-top:1px solid var(--coral);
+    padding-top:18px;
+    display:flex;
+    justify-content:flex-end;
+  }
+  footer.doc .sig{
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--muted);
+    font-size:12.5px;
+  }
+
+  /* ============ PRINT ============ */
+  @page{size:A4;margin:20mm}
+  @media print{
+    html,body{background:#fff}
+    body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .wrap{padding:0;max-width:none}
+    section,table,tbody tr{page-break-inside:avoid}
+    thead{display:table-header-group}
+    h1{font-size:36px}
+    .sec-title{font-size:24px}
+  }
+
+  @media (max-width:860px){
+    .wrap{padding:32px 20px 60px}
+    h1{font-size:32px}
+    .hero-sub{font-size:16px}
+    .meta-grid{grid-template-columns:repeat(2,1fr)}
+    .sec-title{font-size:22px}
+    table{font-size:12px}
+    thead th,tbody td{padding:10px 10px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- =================== HERO =================== -->
+<header class="hero">
+  <div class="hero-top">
+    <div class="logo" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 564 575" fill="none"><path d="M543.226 178.172L442.93 119.392C443.194 117.952 443.72 116.643 443.72 115.203V26.5752C443.72 11.913 431.743 0 417.001 0H363.562C348.821 0 336.843 11.913 336.843 26.5752V57.6015L300.516 36.3936C285.774 27.6225 266.294 29.0626 252.605 39.1428C252.342 39.2737 252.079 39.2737 251.947 39.4046L20.951 172.543C1.73419 183.932 -6.29474 210.507 5.55122 230.406C17.9237 251.09 45.301 256.588 64.5178 245.199L78.3381 237.213C62.017 269.025 51.7505 305.026 51.7505 344.169C51.7505 406.221 75.7056 467.226 119.799 511.344C137.173 528.624 157.443 543.156 179.555 553.759C196.666 562.007 214.567 568.814 233.257 572.218C258.002 576.669 283.8 574.444 308.808 574.444C335.922 574.444 363.036 574.444 390.018 574.444C414.5 574.444 439.113 574.575 463.99 574.575C470.176 574.575 476.231 573.004 481.759 570.254C488.866 566.72 492.947 562.792 497.685 556.509C502.95 549.57 506.635 541.061 506.635 532.159V252.923C525.062 259.599 547.306 253.839 558.363 235.511C570.34 215.613 562.311 189.038 542.963 177.648L543.226 178.172ZM427.794 348.751C427.794 433.582 370.012 502.573 282.878 502.573C195.745 502.573 131.777 429.131 131.777 344.3C131.777 259.468 195.745 188.776 282.878 188.776C370.012 188.776 427.794 254.232 427.794 338.147V348.751Z" fill="#EB615E"/></svg>
+    </div>
+    <div class="brand">
+      Seazone <span class="sep">·</span> BackOffice Franquias <span class="sep">·</span> Documento executivo
+    </div>
+  </div>
+
+  <div class="alert">
+    <span><span class="tag">Modo emergencial</span>48h de triagem · David sai sexta 31/10</span>
+    <span>Entregas rastreadas em tabela — marque a caixa ao concluir</span>
+  </div>
+
+  <h1>Passagem de Bastão — Adm/Financeiro Franquias</h1>
+  <p class="hero-sub">29–30 OUT 2026 · 48 horas de triagem</p>
+
+  <div class="meta-grid">
+    <div class="cell"><div class="k">De</div><div class="v">David Soares</div></div>
+    <div class="cell"><div class="k">Para</div><div class="v">Isabella (coord.)</div></div>
+    <div class="cell"><div class="k">Gestora</div><div class="v">Rayanne Oliveira</div></div>
+    <div class="cell"><div class="k">Diretora</div><div class="v">Carol Espindola</div></div>
+  </div>
+
+  <div class="summary">
+    <p>Em 48h úteis não cabe uma passagem de bastão clássica: o que se faz é garantir que o perímetro individual do David saia da conta pessoal dele e entre no repositório oficial do time, com Rayanne e Isa como mantenedoras e Carol como garantia institucional em toda plataforma.</p>
+    <p>A filosofia é cirúrgica: priorizar o que quebra em 7 dias, aceitar o que aguenta 30, e marcar explicitamente o que entra no cemitério — processos que ninguém vai executar na semana 1 e que a Carol precisa saber que pausamos.</p>
+    <p>Cada seção é uma tabela de verificação. A linha-cumeeira é a seção 02 (agentes, crons e workflows): sem transferência de ownership antes de sexta, as automações param silenciosamente quando a conta do David for encerrada.</p>
+    <p>Pós-48h, a Isa opera com 12 workflows novos construídos em janelas semanais — eles também compõem a métrica de workflows no painel P75 da gestora.</p>
+  </div>
+</header>
+
+<!-- =================== 01 — SKILLS =================== -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num">01</div>
+    <h2 class="sec-title">Skills no repositório oficial do time</h2>
+    <div class="sec-count">Mandato Rayanne · prioridade máxima</div>
+  </div>
+  <p class="sec-intro">Nenhuma skill crítica do David pode permanecer apenas em <code>~/.claude/skills/</code> local. Tudo migra para o repo compartilhado do BackOffice, com Rayanne + Isa como mantenedoras e Carol como adm institucional.</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Skill</th>
+        <th>Local atual</th>
+        <th>Ação</th>
+        <th>Responsável</th>
+        <th>Prazo</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">kpis-adm-fin-franquias</td><td>~/.claude/skills/ (David)</td><td>Push pro repo time + README de operação</td><td>David → Rayanne</td><td class="when"><span class="pill d1">D1 manhã</span></td><td>Core do dia-a-dia da Isa; Loom obrigatório antes do push.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">analise-faturamento-franquia</td><td>Repo pessoal / local</td><td>Confirmar presença no repo compartilhado</td><td>David</td><td class="when"><span class="pill d1">D1</span></td><td>Verificar se input/output e MCP calls estão documentados.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">auditoria-config-nao-bate-taxa-limpeza</td><td>~/.claude/skills/ (David)</td><td>Migrar + marcar dono Rayanne</td><td>David → Rayanne</td><td class="when"><span class="pill d1">D1</span></td><td>Página pública já no ar; skill alimenta recorrência.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">analise-taxa-limpeza-competitividade</td><td>Local David</td><td>Migrar + confirmar MCP taxa-limpeza + chave Isa</td><td>David → Isa</td><td class="when"><span class="pill d2">D2</span></td><td>Rodar com <code>com_regua=True</code> antes de passar (pendência da Carol).</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">casos-pontuais-precificacao</td><td>Local David</td><td>Migrar + documentar pipeline form→Sheets→RM</td><td>David → Isa</td><td class="when"><span class="pill d1">D1 tarde</span></td><td>Cron 30 min continua rodando; dono técnico vira Isa.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">nota-taxa-limpeza-iara</td><td>Local David</td><td>Migrar + apontar 3 páginas públicas</td><td>David</td><td class="when"><span class="pill d1">D1</span></td><td>Nota, auditoria por franquia e impactos implantação já publicadas.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Outras skills locais (inventário)</td><td>~/.claude/skills/ David</td><td>Rodar <code>ls ~/.claude/skills/</code>, inventariar e migrar as úteis; arquivar as mortas</td><td>David → Rayanne</td><td class="when"><span class="pill d1">D1 09h</span></td><td>Lista completa cola no runbook; cada linha vira entrada aqui.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">README do repo de skills do time</td><td>Repo compartilhado</td><td>Garantir seção “Adm/Financeiro” com dono atual</td><td>Rayanne</td><td class="when"><span class="pill d2">D2</span></td><td>Padrão igual ao do setor Henry/Fornecedores.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Permissão de escrita Isa</td><td>GitHub repo skills</td><td>Dar role Maintainer/Admin pra Isa</td><td>Rayanne</td><td class="when"><span class="pill d1">D1 manhã</span></td><td>Pré-requisito pra Isa receber a passagem.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Permissão de escrita Rayanne</td><td>GitHub repo skills</td><td>Confirmar role Admin</td><td>Rayanne</td><td class="when"><span class="pill d1">D1 manhã</span></td><td>Sem admin, Ray não consegue rotacionar donos depois.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Permissão leitura Carol</td><td>GitHub repo skills</td><td>Garantir acesso leitura (institucional)</td><td>Rayanne</td><td class="when"><span class="pill d2">D2</span></td><td>Carol não opera, mas precisa auditar se necessário.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Deprecação de skill pessoal David</td><td>~/.claude/skills/ David</td><td>Marcar como <code>DEPRECATED</code> ou remover após migração</td><td>David</td><td class="when"><span class="pill d2">D2 tarde</span></td><td>Evita Isa pegar versão antiga por engano.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =================== 02 — AGENTES / CRONS / WORKFLOWS =================== -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num">02</div>
+    <h2 class="sec-title">Agentes, crons e workflows no repositório</h2>
+    <div class="sec-count">Mandato Rayanne · prioridade máxima</div>
+  </div>
+  <p class="sec-intro">Qualquer automação owned pelo David (Hermes, Olimpo, Composio, Python em <code>~/scripts/</code>) tem que ter owner técnico redirecionado antes do desligamento, caso contrário param quando a conta expira.</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Agente / Cron / Workflow</th>
+        <th>Plataforma</th>
+        <th>Owner atual</th>
+        <th>Novo owner</th>
+        <th>Prazo</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Crons Hermes ativos do David</td><td>Hermes CLI (RayAi)</td><td>David</td><td>Rayanne (owner) / Isa (op)</td><td class="when"><span class="pill d1">D1</span></td><td>Rodar <code>hermes cron list</code> no WSL do David; identificar job IDs e migrar.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Relatório mensal BackOffice (David)</td><td>Hermes / Python</td><td>David</td><td>Isa</td><td class="when"><span class="pill d2">D2</span></td><td>Confirmar se script está no repo compartilhado; não deixar só na máquina.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Dailies de KPI Adm/Fin</td><td>Hermes</td><td>David</td><td>Isa</td><td class="when"><span class="pill d1">D1 tarde</span></td><td>Testar com Isa recebendo DM antes da sex 31/10.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Workflows Olimpo (área David)</td><td>Olimpo</td><td>David</td><td>Rayanne (admin) + Isa (editor)</td><td class="when"><span class="pill d2">D2</span></td><td>Transferir ownership antes do deligamento, não só compartilhar.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Automações Composio (Gmail/Calendar/Drive)</td><td>Composio</td><td>David</td><td>Avaliar: Isa ou descontinuar</td><td class="when"><span class="pill d1">D1</span></td><td>Conexões pessoais Composio morrem com a conta; só migra o que for processo recorrente.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Scripts Python em ~/scripts/ David</td><td>WSL local David</td><td>David</td><td>Repo compartilhado</td><td class="when"><span class="pill d1">D1 fim</span></td><td>Push <code>/scripts/adm-fin/</code> no repo do time; cron reaponta pra lá.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Agentes customizados em CLAUDE.md</td><td>CLAUDE.md pessoal</td><td>David</td><td>Documentar no repo time</td><td class="when"><span class="pill d2">D2 manhã</span></td><td>Isa herda os prompts e regras no formato <code>docs/arquitetura-setor/</code>.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Verificação pós-desligamento</td><td>Todas as plataformas</td><td>—</td><td>Rayanne</td><td class="when"><span class="pill pos">Semana 1 pós</span></td><td>Checar se nada caiu silencioso quando a conta do David foi encerrada.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Chave MCP data-lake / taxa-limpeza</td><td>MCPs Seazone</td><td>David</td><td>Isa (nova) + Rayanne (mantém)</td><td class="when"><span class="pill d1">D1</span></td><td>Gerar chave nova pra Isa; não transferir a do David.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Chaves Hermes / RayAi</td><td>Hermes</td><td>David (bot pessoal, se houver)</td><td>Avaliar: desativar</td><td class="when"><span class="pill d2">D2</span></td><td>RayAi é institucional; se David tinha bot pessoal, desativar após desligamento.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =================== 03 — ACESSOS =================== -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num">03</div>
+    <h2 class="sec-title">Acessos — Rayanne + Isa + Carol como admin</h2>
+    <div class="sec-count">Mandato Rayanne · garantia institucional</div>
+  </div>
+  <p class="sec-intro">Em toda ferramenta/sistema/API da área, os três perfis precisam estar admin antes de sex 31/10. Carol não opera, mas fica como garantia institucional pra evitar lock-out se Rayanne e Isa saírem simultaneamente.</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Ferramenta / Sistema</th>
+        <th>Rayanne hoje</th>
+        <th>Isa hoje</th>
+        <th>Carol hoje</th>
+        <th>Ação</th>
+        <th>Responsável</th>
+        <th>Status esperado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">GitHub org Seazone (repos da área)</td><td>?</td><td>?</td><td>?</td><td>Promover os 3 a Admin dos repos do BackOffice</td><td>Rayanne (abre ticket TI se precisar)</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Supabase (projetos da área)</td><td>?</td><td>?</td><td>?</td><td>Convidar Isa + Carol como Owner/Admin</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Coolify (deploys área)</td><td>?</td><td>?</td><td>?</td><td>Promover a Admin</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">kpi-system.seazone.dev</td><td>Write</td><td>?</td><td>?</td><td>Garantir Admin + scope <code>write</code> nos 3</td><td>Rayanne</td><td>3 Admin+Write</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Taskdex</td><td>?</td><td>?</td><td>?</td><td>Promover a Admin da lista “Atividades Operação Iara” e correlatas</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Stays (PMS)</td><td>?</td><td>?</td><td>?</td><td>Consultar RH/TI; se não houver Admin, nível mais alto possível</td><td>Rayanne → Pessoas</td><td>Nível máx. permitido</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Pipefy — Pipe 12 Recompra</td><td>?</td><td>?</td><td>?</td><td>Admin nos 3</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Pipefy — Pipe 14 Manutenção</td><td>?</td><td>?</td><td>?</td><td>Admin nos 3</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Pipefy — Pipe 5 Migração</td><td>?</td><td>?</td><td>?</td><td>Admin nos 3</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Sapron (backend)</td><td>Leitura</td><td>?</td><td>?</td><td>Garantir leitura mínima nos 3; escrita se Isa precisar</td><td>Rayanne → TI</td><td>Leitura mín. nos 3</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Nekt (data lake)</td><td>?</td><td>?</td><td>?</td><td>Admin nos 3</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Portal MGO</td><td>?</td><td>?</td><td>?</td><td>Admin nos 3</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Central de Ocorrências</td><td>?</td><td>?</td><td>?</td><td>Admin nos 3 (quando reativar; endpoint restrito hoje)</td><td>Rayanne → Ops</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Hub de KPIs</td><td>Write</td><td>?</td><td>?</td><td>Admin + Write nos 3</td><td>Rayanne</td><td>3 Admin+Write</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Google Workspace — Drive da área</td><td>?</td><td>?</td><td>?</td><td>Owner Rayanne, Editor Isa + Carol</td><td>Rayanne</td><td>Owner Ray · Editor Isa+Carol</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Slack — canais privados da área</td><td>Admin</td><td>?</td><td>?</td><td>Admin em #liderança-franquias-ray e correlatos</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Hermes (bots pessoais David)</td><td>—</td><td>—</td><td>—</td><td>Avaliar transferência; se não migrar, desativar</td><td>Rayanne</td><td>Decidido</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Olimpo</td><td>?</td><td>?</td><td>?</td><td>Admin nos 3</td><td>Rayanne</td><td>3 Admin</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Composio (conexões compartilhadas)</td><td>?</td><td>?</td><td>?</td><td>Avaliar: conexões pessoais não transferem; recriar na Isa</td><td>Isa + Rayanne</td><td>Isa com Gmail/Cal/Drive conectados</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">MCP data-lake</td><td>Chave</td><td>—</td><td>—</td><td>Gerar chave Isa; manter Rayanne</td><td>Isa</td><td>2 chaves ativas</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">MCP taxa-limpeza</td><td>Chave</td><td>—</td><td>—</td><td>Gerar chave Isa; manter Rayanne</td><td>Isa</td><td>2 chaves ativas</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">MCP kpi-system</td><td>Chave write</td><td>—</td><td>—</td><td>Gerar chave Isa com scope write</td><td>Isa</td><td>Chave Isa + Ray</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Secrets em repos GitHub</td><td>—</td><td>—</td><td>—</td><td>Rotacionar tudo que o David conhecia</td><td>Rayanne</td><td>Rotacionado</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Pastas Drive da área (owner)</td><td>?</td><td>?</td><td>?</td><td>Owner Rayanne · Editor Isa + Carol</td><td>Rayanne</td><td>Owner Ray</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Planilhas RM (casos pontuais, calculadora)</td><td>?</td><td>?</td><td>?</td><td>Owner Rayanne · Editor Isa + Carol; IMPORTRANGE segue ativo</td><td>Rayanne</td><td>Owner Ray</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =================== 04 — REPOSITÓRIOS GITHUB =================== -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num">04</div>
+    <h2 class="sec-title">Repositórios GitHub do David</h2>
+    <div class="sec-count">Transferência de ownership</div>
+  </div>
+  <p class="sec-intro">Páginas públicas e repos sob o usuário pessoal do David precisam migrar antes do desligamento — senão o GitHub Pages cai e as URLs institucionais quebram.</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Repositório</th>
+        <th>URL</th>
+        <th>Ação</th>
+        <th>Novo owner</th>
+        <th>Prazo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">arquitetura-backoffice-franquias</td><td>david-soares-szn.github.io/arquitetura-backoffice-franquias</td><td>Transferir pra org Seazone ou duplicar pra Rayanne</td><td>Rayanne</td><td class="when"><span class="pill d1">D1</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Outros GitHub Pages do David (inventariar)</td><td>david-soares-szn.github.io/*</td><td>Listar via <code>gh repo list</code>; decidir migrar/arquivar</td><td>Rayanne</td><td class="when"><span class="pill d1">D1 manhã</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Secrets em todos os repos migrados</td><td>GitHub Actions / Secrets</td><td>Rotacionar chaves API, tokens Supabase e similares</td><td>Rayanne</td><td class="when"><span class="pill d2">D2</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">GitHub Actions / crons agendados</td><td>Workflows em .github/</td><td>Verificar <code>schedule:</code> e re-apontar segredos</td><td>Rayanne</td><td class="when"><span class="pill d2">D2</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">README oficial com dono + fonte de dados</td><td>Em cada repo migrado</td><td>Documentar: dono, fonte, cron, impacto se cair</td><td>Isa</td><td class="when"><span class="pill pos">Semana 1 pós</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =================== 05 — DASHBOARDS =================== -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num">05</div>
+    <h2 class="sec-title">Dashboards e páginas publicadas</h2>
+    <div class="sec-count">Continuidade operacional</div>
+  </div>
+  <p class="sec-intro">URLs públicas que a Carol e o time usam no dia-a-dia não podem cair. Cada uma precisa de dono técnico confirmado antes de sex 31/10.</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Dashboard / Página</th>
+        <th>URL / Localização</th>
+        <th>Fonte de dados</th>
+        <th>Novo owner técnico</th>
+        <th>Status esperado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Páginas em david-soares-szn.github.io</td><td>david-soares-szn.github.io/*</td><td>Múltiplas (ver seção 04)</td><td>Rayanne (owner) + Isa (op)</td><td>Migradas ou arquivadas</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Dashboards de precificação ativos</td><td>Inventariar com David</td><td>Supabase / Nekt</td><td>Isa</td><td>No ar + README</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Casos pontuais (form → Sheets → RM)</td><td>Projects/casos_pontuais / Sheets RM</td><td>Form respostas → IMPORTRANGE</td><td>Isa</td><td>Cron 30min rodando</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Página auditoria config taxa limpeza</td><td>raayeoliveira.github.io/auditoria-config-nao-bate-taxa-limpeza</td><td>MCP taxa-limpeza</td><td>Rayanne (já é dona)</td><td>Mantida</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Nota + 2 docs taxa limpeza Iara</td><td>raayeoliveira.github.io/*</td><td>MCP taxa-limpeza + Sapron</td><td>Rayanne</td><td>Mantidas; Isa opera recorrência</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Impactos implantação consolidado</td><td>raayeoliveira.github.io/impactos-implantacao-consolidado</td><td>Múltiplas</td><td>Rayanne</td><td>Mantida</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Página casos pontuais executiva</td><td>raayeoliveira.github.io/casos-pontuais-precificacao</td><td>Sheets RM</td><td>Isa (op) · Rayanne (dona)</td><td>Mantida + Isa como contato</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =================== 06 — DOCUMENTAÇÃO =================== -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num">06</div>
+    <h2 class="sec-title">Documentação mínima — produção do David nas 48h</h2>
+    <div class="sec-count">Entregas obrigatórias</div>
+  </div>
+  <p class="sec-intro">Linha de corte: só é handover válido se os seis artefatos abaixo saírem. Sem Loom das skills e sem a lista “SOS Isa 30d”, a transição não fecha.</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Documento</th>
+        <th>Formato</th>
+        <th>Prazo</th>
+        <th>Entregue a</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Loom das skills críticas (até 5, 15min cada)</td><td>Loom · link no runbook</td><td class="when"><span class="pill d1">D1 09h–11h</span></td><td>Isa + Rayanne</td><td>Prioridade: kpis-adm-fin, casos pontuais, análise faturamento.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">runbook-adm-fin.md</td><td>Markdown no repo time</td><td class="when"><span class="pill d2">D2 10h–12h</span></td><td>Repo</td><td>Régua calculadora, critério aprovação, lógica ajuste de preço — tudo em texto.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Lista “quebra em 7d vs aguenta 30d”</td><td>Tabela no runbook</td><td class="when"><span class="pill d1">D1 11h–12h</span></td><td>Rayanne</td><td>Define onde a Isa foca na semana 1 vs onde pode esperar.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Lista cemitério (processos que morrem)</td><td>Markdown</td><td class="when"><span class="pill d1">D1 17h</span></td><td>Rayanne</td><td>Rayanne aceita e comunica Carol; não entra na mochila da Isa.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Template arquitetura setor preenchido</td><td>HTML (modelo Henry)</td><td class="when"><span class="pill d1">D1 até 13h</span></td><td>Repo + raayeoliveira.github.io</td><td>Rascunho hoje; Isa complementa na semana 1 pós.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Lista “SOS Isa 30d”</td><td>Markdown no runbook</td><td class="when"><span class="pill d2">D2 16h</span></td><td>Isa</td><td>Quando Isa chama Rayanne, quando chama Carol, quando chama o David (se concordar).</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =================== 07 — RITUAL 48H =================== -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num">07</div>
+    <h2 class="sec-title">Ritual de 48h — cronograma por horário</h2>
+    <div class="sec-count">10 ações críticas e importantes</div>
+  </div>
+  <p class="sec-intro">Agenda bloqueada em Rayanne + David + Isa. Carol recebe status no fim de D2. Toda ação com prioridade crítica trava o restante se não for cumprida.</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Horário</th>
+        <th>Ação</th>
+        <th>Quem</th>
+        <th>Entrega</th>
+        <th>Prioridade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 09h</span></td><td class="item">Kickoff + inventário skills/crons/repos</td><td>Rayanne + David + Isa</td><td>Lista bruta no runbook</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 09h30</span></td><td class="item">Gravar Loom skills críticas</td><td>David</td><td>5 Looms linkados</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 11h</span></td><td class="item">Lista “quebra 7d vs aguenta 30d”</td><td>David → Rayanne</td><td>Tabela acordada</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 13h</span></td><td class="item">Push de skills + scripts pro repo time</td><td>David</td><td>Commits no repo + Isa com acesso</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 15h</span></td><td class="item">Migrar crons Hermes + Olimpo pra novo owner</td><td>David + Rayanne</td><td>Jobs rodando no nome certo</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 17h</span></td><td class="item">Lista cemitério fechada</td><td>Rayanne + David</td><td>Rayanne comunica Carol</td><td class="pri imp"><span class="dot imp"></span><span class="lbl">Importante</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d2">D2 09h</span></td><td class="item">Promover Rayanne + Isa + Carol como Admin em todas as plataformas da seção 03</td><td>Rayanne</td><td>Tabela 03 com 3 Admin em cada linha</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d2">D2 10h</span></td><td class="item">Escrever runbook-adm-fin.md</td><td>David</td><td>Markdown commitado</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d2">D2 14h</span></td><td class="item">Dry-run: Isa opera skill kpis-adm-fin com David assistindo</td><td>Isa (hands) + David (apoio)</td><td>Lançamento real do dia</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d2">D2 16h</span></td><td class="item">Lista SOS Isa 30d + status final pra Carol</td><td>Rayanne</td><td>DM Carol + canal liderança-franquias-ray</td><td class="pri imp"><span class="dot imp"></span><span class="lbl">Importante</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =================== 08 — RISCOS =================== -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num">08</div>
+    <h2 class="sec-title">Riscos aceitos e cemitério</h2>
+    <div class="sec-count">Transparência Carol</div>
+  </div>
+  <p class="sec-intro">Em 48h não dá pra salvar tudo. Esses pontos são aceitos explicitamente pela Rayanne e comunicados à Carol como custo da velocidade.</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Risco / Processo que pausa</th>
+        <th>Impacto</th>
+        <th>Mitigação</th>
+        <th>Dono mitigação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Processos do David sem documentação prévia</td><td>Isa trabalha sem runbook granular na semana 1</td><td>Rayanne roda validador-carol em cada entrega + ouve na 1:1 diária</td><td>Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Arquitetura do setor em rascunho</td><td>Documento oficial fica incompleto por 30d</td><td>Isa complementa semana a semana usando modelo Henry</td><td>Isa</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Prompts específicos no histórico Claude do David</td><td>Perdemos nuances de operação</td><td>Loom + runbook capturam os críticos; o resto é aceito</td><td>David → Isa</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Degradação temporária em dashboards sem dono</td><td>Página pode ficar sem atualização 1–2 semanas</td><td>Rayanne absorve manutenção crítica; outras entram na fila da Isa</td><td>Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Conhecimento tácito da régua de pricing</td><td>Decisões de borda ficam dependentes de consulta à Rayanne</td><td>Runbook descreve critério; casos de borda sobem pra Carol</td><td>Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Processos no cemitério (lista do David)</td><td>Explícitos; não serão executados</td><td>Comunicados a Carol em D2 16h</td><td>Rayanne</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =================== 09 — PÓS-48H =================== -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num">09</div>
+    <h2 class="sec-title">Pós-48h — próximos 30 dias</h2>
+    <div class="sec-count">Trilha de estabilização</div>
+  </div>
+  <p class="sec-intro">A transição não termina na sexta; termina quando a Isa opera sem apoiar na Rayanne pra decisões rotineiras. Os 12 workflows abaixo também sobem a métrica de workflows no P75.</p>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Ação</th>
+        <th>Semana</th>
+        <th>Responsável</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_audita_taxa_limpeza_vs_regua</code> — auditoria da config vs régua da calculadora</td><td class="when"><span class="pill pos">S1</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_concilia_comissao_enxoval_3fontes</code> — cruza Matinalli + RM + Lojinha + Jornada</td><td class="when"><span class="pill pos">S1</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_relatorio_faturamento_12m_franquia</code> — relatório de faturamento 12m por franqueado</td><td class="when"><span class="pill pos">S1</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_triagem_caso_pontual</code> — triagem dos casos pontuais que entram pelo form</td><td class="when"><span class="pill pos">S1</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_lanca_kpis_adm_fin_diario</code> — lança os KPIs da área adm/fin no kpi-system</td><td class="when"><span class="pill pos">S2</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_alerta_divergencia_preco</code> — alerta franquia com aceite baixo / preço fora</td><td class="when"><span class="pill pos">S2</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_monitora_inadimplencia_franqueado</code> — quem tá devendo repasse/mensalidade há mais de X dias</td><td class="when"><span class="pill pos">S2</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_fecha_comissao_mensal_franqueado</code> — fecha comissão por franqueado no fim do mês</td><td class="when"><span class="pill pos">S3</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_gera_repasse_mensal_franquia</code> — gera planilha de repasse mensal + aprovação</td><td class="when"><span class="pill pos">S3</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_concilia_repasse_franquia</code> — bate entrada bancária × repasse previsto</td><td class="when"><span class="pill pos">S3</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_recalcula_preco_lote_imoveis</code> — recalcula preço em lote quando régua muda</td><td class="when"><span class="pill pos">S4</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_diagnostica_queda_performance_franquia</code> — diagnostica queda de performance em uma franquia</td><td class="when"><span class="pill pos">S4</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_cobra_dano_hospede</code> — garante que o dano seja cobrado do hóspede e repassado ao proprietário</td><td class="when"><span class="pill pos">S4</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Construir workflow <code>wf_apura_custo_imovel</code> — apura custo correto por imóvel</td><td class="when"><span class="pill pos">S4</span></td><td>Isa + Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Isa preenche template arquitetura setor (modelo Henry)</td><td class="when"><span class="pill pos">S1–S4</span></td><td>Isa</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Rayanne roda validador-carol em cada entrega da Isa</td><td class="when"><span class="pill pos">S1–S4</span></td><td>Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Avaliar sobrecarga Isa (Pré-UTI + nova área)</td><td class="when"><span class="pill pos">S2</span></td><td>Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">1:1 semanal Isa dedicada à área Adm/Fin</td><td class="when"><span class="pill pos">S1–S4</span></td><td>Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Status consolidado pra Carol fim de S4</td><td class="when"><span class="pill pos">S4</span></td><td>Rayanne</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="doc">
+  <div class="sig">Rayanne Oliveira · BackOffice Franquias Seazone · 28/10/2026</div>
+</footer>
+
+</div>
+</body>
+</html>
