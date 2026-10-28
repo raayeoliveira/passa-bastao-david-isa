@@ -386,32 +386,68 @@
     <h2 class="sec-title">Agentes, crons e workflows no repositório</h2>
     <div class="sec-count">Mandato Rayanne · prioridade máxima</div>
   </div>
-  <p class="sec-intro">Qualquer automação owned pelo David (Hermes, Olimpo, Composio, Python em <code>~/scripts/</code>) tem que ter owner técnico redirecionado antes do desligamento, caso contrário param quando a conta expira.</p>
+  <p class="sec-intro">Todos os agentes, crons, workflows e automações operados pelo David passam a ter <strong>Isabella</strong> como owner. <strong>Rayanne Oliveira</strong> e <strong>Carol Espindola</strong> ficam como admins/backup em cada um. O David executa a transferência durante o handover 48h — Rayanne confirma caso a caso.</p>
   <table>
     <thead>
       <tr>
         <th></th>
-        <th>Agente / Cron / Workflow</th>
+        <th>Item</th>
         <th>Plataforma</th>
         <th>Owner atual</th>
         <th>Novo owner</th>
+        <th>Admins/backup</th>
         <th>Prazo</th>
         <th>Observação</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Crons Hermes ativos do David</td><td>Hermes CLI (RayAi)</td><td>David</td><td>Rayanne (owner) / Isa (op)</td><td class="when"><span class="pill d1">D1</span></td><td>Rodar <code>hermes cron list</code> no WSL do David; identificar job IDs e migrar.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Relatório mensal BackOffice (David)</td><td>Hermes / Python</td><td>David</td><td>Isa</td><td class="when"><span class="pill d2">D2</span></td><td>Confirmar se script está no repo compartilhado; não deixar só na máquina.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Dailies de KPI Adm/Fin</td><td>Hermes</td><td>David</td><td>Isa</td><td class="when"><span class="pill d1">D1 tarde</span></td><td>Testar com Isa recebendo DM antes da sex 31/10.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Workflows Olimpo (área David)</td><td>Olimpo</td><td>David</td><td>Rayanne (admin) + Isa (editor)</td><td class="when"><span class="pill d2">D2</span></td><td>Transferir ownership antes do deligamento, não só compartilhar.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Automações Composio (Gmail/Calendar/Drive)</td><td>Composio</td><td>David</td><td>Avaliar: Isa ou descontinuar</td><td class="when"><span class="pill d1">D1</span></td><td>Conexões pessoais Composio morrem com a conta; só migra o que for processo recorrente.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Scripts Python em ~/scripts/ David</td><td>WSL local David</td><td>David</td><td>Repo compartilhado</td><td class="when"><span class="pill d1">D1 fim</span></td><td>Push <code>/scripts/adm-fin/</code> no repo do time; cron reaponta pra lá.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Agentes customizados em CLAUDE.md</td><td>CLAUDE.md pessoal</td><td>David</td><td>Documentar no repo time</td><td class="when"><span class="pill d2">D2 manhã</span></td><td>Isa herda os prompts e regras no formato <code>docs/arquitetura-setor/</code>.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Verificação pós-desligamento</td><td>Todas as plataformas</td><td>—</td><td>Rayanne</td><td class="when"><span class="pill pos">Semana 1 pós</span></td><td>Checar se nada caiu silencioso quando a conta do David foi encerrada.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Chave MCP data-lake / taxa-limpeza</td><td>MCPs Seazone</td><td>David</td><td>Isa (nova) + Rayanne (mantém)</td><td class="when"><span class="pill d1">D1</span></td><td>Gerar chave nova pra Isa; não transferir a do David.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Chaves Hermes / RayAi</td><td>Hermes</td><td>David (bot pessoal, se houver)</td><td>Avaliar: desativar</td><td class="when"><span class="pill d2">D2</span></td><td>RayAi é institucional; se David tinha bot pessoal, desativar após desligamento.</td></tr>
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Agentes Claude Code · sub-agentes personalizados</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Sub-agentes definidos no CLAUDE.md do David</td><td>CLAUDE.md pessoal</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>David documenta os prompts e passa pra Isa no formato <code>docs/arquitetura-setor/</code>.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Agente revisor de PR do David (se houver)</td><td>Claude Code / repo</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Mover para repo compartilhado antes do desligamento.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Outros agentes customizados <code>.claude/agents/*</code></td><td>Claude Code local</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Listar todos e migrar junto com o CLAUDE.md.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Crons Hermes · bot RayAi/pessoal</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Todos os cron jobs ativos no nome do David no Hermes</td><td>Hermes CLI</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1 15h</span></td><td>Transferir via <code>hermes jobs transfer</code> ou recriar no nome da Isa.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Rotinas diárias (lançamento KPIs, triagem casos pontuais etc.)</td><td>Hermes</td><td>David</td><td>Isabella</td><td>Rayanne</td><td class="when"><span class="pill d1">D1</span></td><td>Recriar com credenciais da Isa; testar DM antes de 31/10.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Rotinas semanais (ex.: auditoria taxa limpeza)</td><td>Hermes</td><td>David</td><td>Isabella</td><td>Rayanne</td><td class="when"><span class="pill d1">D1</span></td><td>Validar primeira execução pós-migração.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Rotinas mensais (ex.: fechamento comissão)</td><td>Hermes</td><td>David</td><td>Isabella</td><td>Rayanne</td><td class="when"><span class="pill d1">D1</span></td><td>Checar calendário do próximo fechamento antes do deligamento.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Workflows Olimpo</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Todos os workflows no nome do David em Olimpo</td><td>Olimpo</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Transferir ownership no painel Olimpo, não apenas compartilhar.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Secrets atrelados aos workflows</td><td>Olimpo · secrets</td><td>David</td><td>Isabella + Rayanne</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Rotacionar; não herdar secret vinculado ao e-mail do David.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Automações Composio</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Conexões Gmail/Calendar/Drive do David</td><td>Composio</td><td>David</td><td>Isabella (cria as dela)</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Desativar as do David; Isa cria conexões novas em nome próprio.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Fluxos que dependem das conexões do David</td><td>Composio</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d2">D1-D2</span></td><td>Recriar sob a conta da Isa; validar cada fluxo antes de desligar o David.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Scripts Python · <code>~/scripts/</code> do David</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Todos os scripts em <code>~/scripts/</code> do David</td><td>WSL local David</td><td>David</td><td>Repositório oficial compartilhado</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Push <code>/scripts/adm-fin/</code>; crons reapontam pra lá.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Owner técnico dos scripts migrados</td><td>Repo compartilhado</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>CODEOWNERS aponta Isa como responsável; Rayanne/Carol como review backup.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Agentes do Olimpo · plataforma de agentes Seazone</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Agentes publicados pelo David no Olimpo</td><td>Olimpo</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Transferir ownership no painel; validar deploy pós-migração.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Secrets e deploys dos agentes</td><td>Olimpo</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Migrar; rotacionar o que estiver atrelado ao e-mail do David.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">MCP tokens personalizados</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Chaves MCP (Taskdex, kpi-system, Nekt, data-lake)</td><td>MCPs Seazone</td><td>David</td><td>Isabella (chaves novas)</td><td>Rayanne (backup), Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Revogar as do David; gerar novas pra Isa; Rayanne mantém backup.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Bots personalizados (se houver)</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Bot do David no Slack (Hermes/outro)</td><td>Slack · Hermes</td><td>David</td><td>Isabella (ou desativar)</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Transferir se for institucional; desativar se for bot pessoal.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Bot novo da Isa (se ainda não tiver)</td><td>Slack · Hermes</td><td>—</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Provisionar via time de tecnologia antes do desligamento.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Routines remotas · Claude Code (claude.ai)</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Routines agendadas na conta cloud do David</td><td>claude.ai scheduling</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d1">D1</span></td><td>Migrar pra conta Isa; documentar em runbook no repo compartilhado.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Webhooks e integrações</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Webhooks em nome do David apontando pra sistemas da área</td><td>Diversos</td><td>David</td><td>Isabella</td><td>Rayanne, Carol</td><td class="when"><span class="pill d2">D2</span></td><td>Recriar sob Isa; validar entrega ponta a ponta antes de descontinuar o antigo.</td></tr>
+
+      <tr><td colspan="8" style="background:var(--head-bg);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral);padding:10px 14px">Verificação pós-desligamento</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Checar se nada caiu silencioso após encerramento da conta David</td><td>Todas as plataformas</td><td>—</td><td>Isabella (op) / Rayanne (owner)</td><td>Rayanne, Carol</td><td class="when"><span class="pill pos">Semana 1 pós</span></td><td>Rodar varredura full: Hermes, Olimpo, Composio, Claude Code, MCPs, webhooks.</td></tr>
     </tbody>
   </table>
+  <div class="alert" style="margin-top:20px;margin-bottom:0">
+    <div><span class="tag">Garantia institucional</span>Em TODO item migrado, <strong>Rayanne Oliveira</strong> (gestora) e <strong>Carol Espindola</strong> (diretora Franquias) ficam como admins/backup. Isso evita que a área fique sem acesso caso Isabella saia de férias ou se afaste.</div>
+  </div>
 </section>
 
 <!-- =================== 03 — ACESSOS =================== -->
