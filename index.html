@@ -340,7 +340,7 @@
     <p>Em 48h úteis não cabe uma passagem de bastão clássica: o que se faz é garantir que o perímetro individual do David saia da conta pessoal dele e entre no repositório oficial do time, com Rayanne e Isa como mantenedoras e Carol como garantia institucional em toda plataforma.</p>
     <p>A filosofia é cirúrgica: priorizar o que quebra em 7 dias, aceitar o que aguenta 30, e marcar explicitamente o que entra no cemitério — processos que ninguém vai executar na semana 1 e que a Carol precisa saber que pausamos.</p>
     <p>Cada seção é uma tabela de verificação. A linha-cumeeira é a seção 02 (agentes, crons e workflows): sem transferência de ownership antes de sexta, as automações param silenciosamente quando a conta do David for encerrada.</p>
-    <p>Logo após o handover, nos dias 30/10 à tarde e 31/10 integral, Isa + David constroem juntos os 14 workflows que vão sustentar a área sem o David.</p>
+    <p>Logo após o handover, nos dias 30/10 à tarde e 31/10 integral, <strong>David</strong>, <strong>Rayanne</strong> e <strong>Vinicius</strong> (Coord. Manutenção, AI builder) constroem em paralelo os 14 workflows que vão sustentar a área sem o David. Vinicius entra como apoio técnico pra aliviar a Isa, que recebe os workflows prontos e opera — não constrói nessa janela, pra evitar sobrecarga com a Pré-UTI.</p>
   </div>
 </header>
 
@@ -658,7 +658,7 @@
     <h2 class="sec-title">Construção dos workflows — Quinta tarde + Sexta integral</h2>
     <div class="sec-count">Janela dedicada · 15h totais</div>
   </div>
-  <p class="sec-intro">Janela dedicada: <strong>30/10 (quinta) 13h–18h</strong> e <strong>31/10 (sexta) 08h–18h</strong>. Em vez de distribuir ao longo de 30 dias, concentramos a construção enquanto o David ainda está disponível pra validar as regras de negócio. Isa constrói, David valida, Rayanne revisa.</p>
+  <p class="sec-intro">Janela dedicada: <strong>30/10 (quinta) 13h–18h</strong> e <strong>31/10 (sexta) 08h–18h</strong>. Em vez de distribuir ao longo de 30 dias, concentramos a construção em paralelo entre <strong>David</strong> (que conhece as regras), <strong>Rayanne</strong> (coordenação e revisão) e <strong>Vinicius</strong> (apoio técnico como AI builder). <strong>Isa recebe os workflows prontos e opera</strong> — não constrói nessa janela, pra evitar sobrecarga com Pré-UTI. Balanço: David 6 · Rayanne 3 · Vinicius 5.</p>
   <table>
     <thead>
       <tr>
@@ -670,21 +670,21 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_audita_taxa_limpeza_vs_regua</code> — auditoria config vs régua</td><td class="when">13h–14h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_concilia_comissao_enxoval_3fontes</code> — cruza Matinalli + RM + Lojinha + Jornada</td><td class="when">14h–15h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_relatorio_faturamento_12m_franquia</code> — relatório 12m por franqueado</td><td class="when">15h–16h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_triagem_caso_pontual</code> — triagem dos casos pontuais do form</td><td class="when">16h–17h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_lanca_kpis_adm_fin_diario</code> — lança KPIs no kpi-system</td><td class="when">17h–18h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_alerta_divergencia_preco</code> — alerta franquia com aceite baixo / preço fora</td><td class="when">08h–09h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_monitora_inadimplencia_franqueado</code> — devedores &gt;X dias</td><td class="when">09h–10h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_fecha_comissao_mensal_franqueado</code> — comissão por franqueado</td><td class="when">10h–11h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_gera_repasse_mensal_franquia</code> — planilha repasse + aprovação</td><td class="when">11h–12h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Isa + David</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_audita_taxa_limpeza_vs_regua</code> — auditoria config vs régua</td><td class="when">13h–14h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_concilia_comissao_enxoval_3fontes</code> — cruza Matinalli + RM + Lojinha + Jornada</td><td class="when">14h–15h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>David</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_relatorio_faturamento_12m_franquia</code> — relatório 12m por franqueado</td><td class="when">15h–16h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>Rayanne</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_triagem_caso_pontual</code> — triagem dos casos pontuais do form</td><td class="when">16h–17h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>Vinicius</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_lanca_kpis_adm_fin_diario</code> — lança KPIs no kpi-system</td><td class="when">17h–18h</td><td class="when"><span class="pill d1">Qui 30/10</span></td><td>Vinicius</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_alerta_divergencia_preco</code> — alerta franquia com aceite baixo / preço fora</td><td class="when">08h–09h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Vinicius</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_monitora_inadimplencia_franqueado</code> — devedores &gt;X dias</td><td class="when">09h–10h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>David</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_fecha_comissao_mensal_franqueado</code> — comissão por franqueado</td><td class="when">10h–11h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>David</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_gera_repasse_mensal_franquia</code> — planilha repasse + aprovação</td><td class="when">11h–12h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>David</td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="item" style="color:var(--muted);font-style:italic;font-weight:400">— pausa almoço —</td><td class="when">12h–13h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>—</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_concilia_repasse_franquia</code> — bate banco × previsto</td><td class="when">13h–14h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_recalcula_preco_lote_imoveis</code> — recalcula preço quando régua muda</td><td class="when">14h–15h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_diagnostica_queda_performance_franquia</code> — diagnostica queda em franquia</td><td class="when">15h–16h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_cobra_dano_hospede</code> — garante dano cobrado do hóspede/proprietário</td><td class="when">16h–17h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Isa + David</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_apura_custo_imovel</code> — apura custo correto por imóvel</td><td class="when">17h–18h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Isa + David</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_concilia_repasse_franquia</code> — bate banco × previsto</td><td class="when">13h–14h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>David</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_recalcula_preco_lote_imoveis</code> — recalcula preço quando régua muda</td><td class="when">14h–15h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Vinicius</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_diagnostica_queda_performance_franquia</code> — diagnostica queda em franquia</td><td class="when">15h–16h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Vinicius</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_cobra_dano_hospede</code> — garante dano cobrado do hóspede/proprietário</td><td class="when">16h–17h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>David</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item"><code>wf_apura_custo_imovel</code> — apura custo correto por imóvel</td><td class="when">17h–18h</td><td class="when"><span class="pill d2">Sex 31/10</span></td><td>Rayanne</td></tr>
     </tbody>
   </table>
 
@@ -699,6 +699,7 @@
       </tr>
     </thead>
     <tbody>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Transferir workflows construídos pra Isa operar (handshake de ownership)</td><td class="when">1ª semana nov</td><td>Rayanne + Vinicius</td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="item">Isa preenche template arquitetura setor (modelo Henry)</td><td class="when">Primeira semana nov</td><td>Isa</td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="item">Rayanne roda validador-carol em cada entrega da Isa</td><td class="when">Contínuo</td><td>Rayanne</td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="item">Avaliar sobrecarga Isa (Pré-UTI + nova área)</td><td class="when">7 dias após</td><td>Rayanne</td></tr>
