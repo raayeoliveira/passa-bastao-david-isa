@@ -348,37 +348,52 @@
 <section>
   <div class="sec-head">
     <div class="sec-num">01</div>
-    <h2 class="sec-title">Skills no repositório oficial do time</h2>
-    <div class="sec-count">Mandato Rayanne · prioridade máxima</div>
+    <h2 class="sec-title">Skills no repositório oficial Seazone — <code>seazone-tech/seazone-skills</code>, pasta <code>financeiro/skills/</code></h2>
+    <div class="sec-count">Mandato Rayanne · David executa</div>
   </div>
-  <p class="sec-intro">Nenhuma skill crítica do David pode permanecer apenas em <code>~/.claude/skills/</code> local. Tudo migra para o repo compartilhado do BackOffice, com Rayanne + Isa como mantenedoras e Carol como adm institucional.</p>
+  <p class="sec-intro">O repositório oficial de skills do time é <code>github.com/seazone-tech/seazone-skills</code> (site público: <a href="https://skills.seazone.com.br/">skills.seazone.com.br</a>). Cada área de negócio é uma pasta; para Administrativo e Financeiro, a pasta é <code>financeiro/skills/</code>. <strong>Executor:</strong> David Soares, a partir da máquina dele. <strong>Prazo:</strong> até 30/10/2026 (fim do D2 do handover). A Rayanne não migra pelo David — ela documenta, cobra e revisa os PRs.</p>
   <table>
     <thead>
       <tr>
         <th></th>
         <th>Skill</th>
-        <th>Local atual</th>
-        <th>Ação</th>
-        <th>Responsável</th>
-        <th>Prazo</th>
+        <th>Pasta destino</th>
+        <th>Status</th>
         <th>Observação</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">kpis-adm-fin-franquias</td><td>~/.claude/skills/ (David)</td><td>Push pro repo time + README de operação</td><td>David → Rayanne</td><td class="when"><span class="pill d1">D1 manhã</span></td><td>Core do dia-a-dia da Isa; Loom obrigatório antes do push.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">analise-faturamento-franquia</td><td>Repo pessoal / local</td><td>Confirmar presença no repo compartilhado</td><td>David</td><td class="when"><span class="pill d1">D1</span></td><td>Verificar se input/output e MCP calls estão documentados.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">auditoria-config-nao-bate-taxa-limpeza</td><td>~/.claude/skills/ (David)</td><td>Migrar + marcar dono Rayanne</td><td>David → Rayanne</td><td class="when"><span class="pill d1">D1</span></td><td>Página pública já no ar; skill alimenta recorrência.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">analise-taxa-limpeza-competitividade</td><td>Local David</td><td>Migrar + confirmar MCP taxa-limpeza + chave Isa</td><td>David → Isa</td><td class="when"><span class="pill d2">D2</span></td><td>Rodar com <code>com_regua=True</code> antes de passar (pendência da Carol).</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">casos-pontuais-precificacao</td><td>Local David</td><td>Migrar + documentar pipeline form→Sheets→RM</td><td>David → Isa</td><td class="when"><span class="pill d1">D1 tarde</span></td><td>Cron 30 min continua rodando; dono técnico vira Isa.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">nota-taxa-limpeza-iara</td><td>Local David</td><td>Migrar + apontar 3 páginas públicas</td><td>David</td><td class="when"><span class="pill d1">D1</span></td><td>Nota, auditoria por franquia e impactos implantação já publicadas.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Outras skills locais (inventário)</td><td>~/.claude/skills/ David</td><td>Rodar <code>ls ~/.claude/skills/</code>, inventariar e migrar as úteis; arquivar as mortas</td><td>David → Rayanne</td><td class="when"><span class="pill d1">D1 09h</span></td><td>Lista completa cola no runbook; cada linha vira entrada aqui.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">README do repo de skills do time</td><td>Repo compartilhado</td><td>Garantir seção “Adm/Financeiro” com dono atual</td><td>Rayanne</td><td class="when"><span class="pill d2">D2</span></td><td>Padrão igual ao do setor Henry/Fornecedores.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Permissão de escrita Isa</td><td>GitHub repo skills</td><td>Dar role Maintainer/Admin pra Isa</td><td>Rayanne</td><td class="when"><span class="pill d1">D1 manhã</span></td><td>Pré-requisito pra Isa receber a passagem.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Permissão de escrita Rayanne</td><td>GitHub repo skills</td><td>Confirmar role Admin</td><td>Rayanne</td><td class="when"><span class="pill d1">D1 manhã</span></td><td>Sem admin, Ray não consegue rotacionar donos depois.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Permissão leitura Carol</td><td>GitHub repo skills</td><td>Garantir acesso leitura (institucional)</td><td>Rayanne</td><td class="when"><span class="pill d2">D2</span></td><td>Carol não opera, mas precisa auditar se necessário.</td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="item">Deprecação de skill pessoal David</td><td>~/.claude/skills/ David</td><td>Marcar como <code>DEPRECATED</code> ou remover após migração</td><td>David</td><td class="when"><span class="pill d2">D2 tarde</span></td><td>Evita Isa pegar versão antiga por engano.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">kpis-adm-fin-franquias</td><td><code>financeiro/skills/kpis-adm-fin-franquias/</code></td><td>Pendente</td><td>David migra.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Casos pontuais de precificação</td><td><code>financeiro/skills/</code></td><td>Pendente</td><td>Nome exato a confirmar com David.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Conciliação de repasse</td><td><code>financeiro/skills/</code></td><td>Pendente</td><td>David migra.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Monitoramento de inadimplência</td><td><code>financeiro/skills/</code></td><td>Pendente</td><td>David migra.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Fechamento comissão mensal</td><td><code>financeiro/skills/</code></td><td>Pendente</td><td>David migra.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Recálculo de preço em lote</td><td><code>financeiro/skills/</code></td><td>Pendente</td><td>David migra.</td></tr>
+      <tr><td class="chk"><span class="box" style="background:var(--coral);border-color:var(--coral)"></span></td><td class="item">Taxa limpeza antes (já migrada por Rayanne)</td><td><code>financeiro/skills/taxa-limpeza-antes/</code></td><td>Migrada</td><td>PR exploratório #736 foi fechado; David re-envia da máquina dele e troca <code>Responsável:</code> do SKILL.md para <strong>Isabella (Coord. Adm/Fin)</strong>.</td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="item">Demais skills locais do David em <code>~/.claude/skills/</code></td><td><code>financeiro/skills/</code></td><td>Pendente</td><td>Inventariar e migrar uma a uma.</td></tr>
     </tbody>
   </table>
+  <p class="sec-intro" style="margin-top:20px"><strong>Padrão de SKILL.md:</strong> em todas as skills migradas, trocar o campo <code>Responsável:</code> de "David Soares" para "Isabella (Coord. Adm/Fin)". <strong>Revisão dos PRs:</strong> Rayanne Oliveira.</p>
+
+  <h3 style="font-family:var(--serif);font-size:18px;font-weight:400;margin:28px 0 12px;color:var(--ink);letter-spacing:-0.01em">Procedimento de migração (David executa)</h3>
+  <pre style="background:#1a1a1a;color:#f0ebe2;padding:20px 22px;border-radius:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12.5px;line-height:1.6;overflow-x:auto;margin:0"># 1. Clonar o repo oficial (uma vez)
+git clone https://github.com/seazone-tech/seazone-skills.git
+cd seazone-skills
+
+# 2. Para cada skill em ~/.claude/skills/ que é da área adm/fin:
+git checkout main &amp;&amp; git pull
+git checkout -b feat/financeiro/&lt;nome-da-skill&gt;
+cp -r ~/.claude/skills/&lt;nome-da-skill&gt; financeiro/skills/
+
+# 3. Editar financeiro/skills/&lt;nome-da-skill&gt;/SKILL.md
+#    - Trocar linha "Responsável:" para "Isabella (Coord. Adm/Fin · BackOffice Franquias)"
+#    - Garantir frontmatter YAML válido
+
+# 4. Commit, push e PR
+git add financeiro/skills/&lt;nome-da-skill&gt;
+git commit -m "feat(&lt;nome-da-skill&gt;): migra skill p/ financeiro (handover)"
+git push -u origin feat/financeiro/&lt;nome-da-skill&gt;
+gh pr create --fill</pre>
 </section>
 
 <!-- =================== 02 — AGENTES / CRONS / WORKFLOWS =================== -->
@@ -580,9 +595,11 @@
       <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 09h</span></td><td class="item">Kickoff + inventário skills/crons/repos</td><td>Rayanne + David + Isa</td><td>Lista bruta no runbook</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 09h30</span></td><td class="item">Gravar Loom skills críticas</td><td>David</td><td>5 Looms linkados</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 11h</span></td><td class="item">Lista “quebra 7d vs aguenta 30d”</td><td>David → Rayanne</td><td>Tabela acordada</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
-      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 13h</span></td><td class="item">Push de skills + scripts pro repo time</td><td>David</td><td>Commits no repo + Isa com acesso</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 14h</span></td><td class="item">David clona <code>seazone-tech/seazone-skills</code> e lista as skills a migrar</td><td>David</td><td>Lista no runbook com nome + pasta destino</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 15h–17h</span></td><td class="item">David migra as skills em <code>~/.claude/skills/</code> dele uma por uma (um PR por skill)</td><td>David</td><td>PRs abertos em <code>seazone-tech/seazone-skills</code></td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 15h</span></td><td class="item">Migrar crons Hermes + Olimpo pra novo owner</td><td>David + Rayanne</td><td>Jobs rodando no nome certo</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d1">D1 17h</span></td><td class="item">Lista cemitério fechada</td><td>Rayanne + David</td><td>Rayanne comunica Carol</td><td class="pri imp"><span class="dot imp"></span><span class="lbl">Importante</span></td></tr>
+      <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d2">D2 09h–10h</span></td><td class="item">David revisa com Rayanne os PRs abertos; Rayanne aprova e faz merge</td><td>David + Rayanne</td><td>PRs merged em <code>seazone-tech/seazone-skills</code></td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d2">D2 09h</span></td><td class="item">Promover Rayanne + Isa + Carol como Admin em todas as plataformas da seção 03</td><td>Rayanne</td><td>Tabela 03 com 3 Admin em cada linha</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d2">D2 10h</span></td><td class="item">Escrever runbook-adm-fin.md</td><td>David</td><td>Markdown commitado</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
       <tr><td class="chk"><span class="box"></span></td><td class="when"><span class="pill d2">D2 14h</span></td><td class="item">Dry-run: Isa opera skill kpis-adm-fin com David assistindo</td><td>Isa (hands) + David (apoio)</td><td>Lançamento real do dia</td><td class="pri crit"><span class="dot crit"></span><span class="lbl">Crítico</span></td></tr>
