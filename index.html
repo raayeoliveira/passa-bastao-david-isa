@@ -376,24 +376,7 @@
   <p class="sec-intro" style="margin-top:20px"><strong>Padrão de SKILL.md:</strong> em todas as skills migradas, trocar o campo <code>Responsável:</code> de "David Soares" para "Isabella (Coord. Adm/Fin)". <strong>Revisão dos PRs:</strong> Rayanne Oliveira.</p>
 
   <h3 style="font-family:var(--serif);font-size:18px;font-weight:400;margin:28px 0 12px;color:var(--ink);letter-spacing:-0.01em">Procedimento de migração (David executa)</h3>
-  <pre style="background:#1a1a1a;color:#f0ebe2;padding:20px 22px;border-radius:3px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12.5px;line-height:1.6;overflow-x:auto;margin:0"># 1. Clonar o repo oficial (uma vez)
-git clone https://github.com/seazone-tech/seazone-skills.git
-cd seazone-skills
-
-# 2. Para cada skill em ~/.claude/skills/ que é da área adm/fin:
-git checkout main &amp;&amp; git pull
-git checkout -b feat/financeiro/&lt;nome-da-skill&gt;
-cp -r ~/.claude/skills/&lt;nome-da-skill&gt; financeiro/skills/
-
-# 3. Editar financeiro/skills/&lt;nome-da-skill&gt;/SKILL.md
-#    - Trocar linha "Responsável:" para "Isabella (Coord. Adm/Fin · BackOffice Franquias)"
-#    - Garantir frontmatter YAML válido
-
-# 4. Commit, push e PR
-git add financeiro/skills/&lt;nome-da-skill&gt;
-git commit -m "feat(&lt;nome-da-skill&gt;): migra skill p/ financeiro (handover)"
-git push -u origin feat/financeiro/&lt;nome-da-skill&gt;
-gh pr create --fill</pre>
+  <p class="sec-intro">David sobe cada skill direto pela interface do <a href="https://skills.seazone.com.br/">skills.seazone.com.br</a> (não precisa clonar nem usar CLI). Para cada skill em <code>~/.claude/skills/</code> dele que é da área adm/fin: acessar o site, enviar a skill na área <code>financeiro</code>, trocar <code>Responsável:</code> para <strong>Isabella (Coord. Adm/Fin)</strong>, publicar.</p>
 </section>
 
 <!-- =================== 02 — AGENTES / CRONS / WORKFLOWS =================== -->
